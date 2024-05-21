@@ -48,7 +48,7 @@ const NavLink: React.FC<NavLinkProps> = ({ name, route, children }) => {
             <a
               key={index}
               href={child.route}
-              className="block font-medium py-2 px-4 hover:bg-neutral-600 hover:text-white rounded mt-[2rem] mb-[2rem] text-gray-950"
+              className="block font-medium py-2 px-4 hover:bg-neutral-600 hover:text-white rounded mx-[0.2rem] my-[2rem]  text-gray-950"
             >
               {child.name}
             </a>
@@ -81,7 +81,7 @@ const Header = () => {
   };
   return (
     <main>
-      <div className=" flex justify-between items-center  w-full fixed bg-transparent z-30 text-white px-5 lg:px-[7rem] pt-3">
+      <div className=" flex justify-between items-center  w-full absolute bg-transparent z-30 text-white px-5 lg:px-[7rem] pt-3">
         <span className=" mt-4">
           <LogoIcon />
         </span>
@@ -89,12 +89,9 @@ const Header = () => {
           <nav className=" text-white p-4">
             <div className="container mx-auto flex justify-around">
               {nav_links.map((nav) => (
-                <NavLink
-                  key={nav.id}
-                  name={nav.name}
-                  route={nav.route}
-                  children={nav.children}
-                />
+                <NavLink key={nav.id} name={nav.name} route={nav.route}>
+                  {nav.children}
+                </NavLink>
               ))}
             </div>
           </nav>
