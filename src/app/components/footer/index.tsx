@@ -26,7 +26,10 @@ const Footer = () => {
         <section className="w-[200px]">
           <h5 className=" text-white">Quick Links</h5>
           {quick_links.map((link) => (
-            <li className=" flex items-center pt-4 gap-3 font-medium text-white">
+            <li
+              className=" flex items-center pt-4 gap-3 font-medium text-white"
+              key={link.text}
+            >
               <link.icon />
               {link?.text}
             </li>
@@ -35,7 +38,10 @@ const Footer = () => {
         <section className=" lg:w-[400px] w-full  pr-[1rem]">
           <h5 className=" text-white">Reach Us</h5>
           {reach_us_link.map((link) => (
-            <li className=" flex pt-4 gap-3 font-medium text-white">
+            <li
+              className=" flex pt-4 gap-3 font-medium text-white"
+              key={link.text}
+            >
               <link.icon />
               {link.text}
             </li>
