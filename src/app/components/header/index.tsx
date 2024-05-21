@@ -3,6 +3,9 @@
 import { LogoIcon } from "@/assets";
 import React, { useState, FC } from "react";
 import { nav_links } from "./menu";
+import { AiOutlineUser } from "react-icons/ai";
+import { GoLock } from "react-icons/go";
+
 import {
   IoIosArrowDown,
   IoIosArrowForward,
@@ -25,7 +28,7 @@ const NavLink: React.FC<NavLinkProps> = ({ name, route, children }) => {
     <div className="relative group">
       <a
         href={route}
-        className="block py-2 px-4 hover:bg-neutral-600 rounded-md capitalize cursor-pointer"
+        className="block py-2 px-4 hover:bg-neutral-600 font-semibold  rounded-md capitalize cursor-pointer"
         onClick={(e) => {
           if (children) {
             e.preventDefault();
@@ -37,7 +40,7 @@ const NavLink: React.FC<NavLinkProps> = ({ name, route, children }) => {
       </a>
       {children && (
         <div
-          className={`absolute capitalize left-[1rem] mt-2 w-[270px] bg-transparent shadow-slate-700 rounded-md  shadow-2xl ${
+          className={`absolute capitalize left-[1rem] mt-2 w-[270px] bg-white shadow-slate-700 rounded-md shadow-2xl ${
             isOpen ? "block" : "hidden"
           } group-hover:block`}
         >
@@ -45,7 +48,7 @@ const NavLink: React.FC<NavLinkProps> = ({ name, route, children }) => {
             <a
               key={index}
               href={child.route}
-              className="block py-2 px-4 hover:bg-neutral-600 rounded-md "
+              className="block font-medium py-2 px-4 hover:bg-neutral-600 hover:text-white rounded mt-[2rem] mb-[2rem] text-gray-950"
             >
               {child.name}
             </a>
@@ -78,7 +81,7 @@ const Header = () => {
   };
   return (
     <main>
-      <div className=" flex justify-between items-center  w-full absolute bg-transparent z-30 text-white px-5 lg:px-[7rem] pt-3">
+      <div className=" flex justify-between items-center  w-full fixed bg-transparent z-30 text-white px-5 lg:px-[7rem] pt-3">
         <span className=" mt-4">
           <LogoIcon />
         </span>
@@ -97,11 +100,12 @@ const Header = () => {
           </nav>
         </section>
         <main className=" gap-3 hidden lg:flex">
-          <button className=" capitalize text-gray-900 font-semibold bg-white h-[40px] rounded-md border-transparent w-[170px] ">
-            sign in
+          <button className=" capitalize text-gray-900 font-semibold bg-white h-[40px] rounded-md border-transparent w-[170px] flex justify-center items-center gap-4 ">
+            <AiOutlineUser />
+            <span>sign in</span>
           </button>
-          <button className=" capitalize text-gray-900 font-semibold bg-white h-[40px] rounded-md border-transparent w-[170px] ">
-            register
+          <button className=" capitalize text-gray-900 font-semibold bg-white h-[40px] rounded-md border-transparent w-[170px]  flex justify-center items-center gap-4 ">
+            <GoLock /> <span> register</span>
           </button>
         </main>
         <button
@@ -163,11 +167,13 @@ const Header = () => {
             </ul>
           </main>
           <main className=" gap-3  flex justify-center my-10">
-            <button className=" capitalize bg-neutral-700 font-semibold text-white h-[40px] rounded-md border-transparent w-[170px] ">
-              sign in
+            <button className=" capitalize bg-neutral-700 font-semibold text-white h-[40px] rounded-md border-transparent w-[170px] flex justify-center items-center gap-4 ">
+              <AiOutlineUser />
+              <span> sign in</span>
             </button>
-            <button className=" capitalize bg-neutral-700 font-semibold text-white h-[40px] rounded-md border-transparent w-[170px] ">
-              register
+            <button className=" capitalize bg-neutral-700 font-semibold text-white h-[40px] rounded-md border-transparent w-[170px] flex justify-center items-center gap-4 ">
+              <GoLock />
+              <span>register</span>
             </button>
           </main>
           <footer className=" text-center">
