@@ -1,6 +1,3 @@
-import bg1 from "./bg1.jpg";
-import bg2 from "./bg2.jpg";
-import bg3 from "./bg3.jpg";
 import teamworkImg from "./teamwork.jpeg";
 import meetingRoom from "./meeting-hall.jpg";
 import visionImg from "./vision.png";
@@ -14,11 +11,16 @@ import team3 from "./team3.jpg";
 import team4 from "./team4.jpg";
 import team5 from "./team5.jpg";
 import team6 from "./team6.jpg";
+import careerBg from "./careerBg.jpg";
+import moneyImg from "./moneyImg.jpg";
+import pin from "./pin.jpg";
+import mutual from "./mutual.jpg";
 
 export {
-  bg1,
-  bg2,
-  bg3,
+  pin,
+  mutual,
+  moneyImg,
+  careerBg,
   teamworkImg,
   visionImg,
   intergrityImg,

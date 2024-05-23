@@ -5,37 +5,37 @@
 h1 {
   font-size: 50px;
   line-height: 60px;
-  font-weight: 600;
+  font-weight: 400;
 }
 h2 {
   font-size: 45px;
   line-height: 55px;
-  font-weight: 600;
+  font-weight: 400;
 }
 h3 {
   font-size: 35px;
   line-height: 46px;
-  font-weight: 600;
+  font-weight: 400;
 }
 h4 {
   font-size: 30px;
   line-height: 35px;
-  font-weight: 500;
+  font-weight: 400;
 }
 h5 {
   font-size: 25px;
   line-height: 30px;
-  font-weight: 500;
+  font-weight: 400;
 }
 h6 {
   font-size: 20px;
   line-height: 25px;
-  font-weight: 500;
+  font-weight: 400;
 }
 p {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 27px;
-  font-weight: 500;
+  font-weight: 400;
 }
 a {
   text-decoration: none;
@@ -58,68 +58,68 @@ a {
   h2 {
     font-size: 30px;
     line-height: 40px;
-    font-weight: 600;
+    font-weight: 400;
   }
   h3 {
     font-size: 25px;
     line-height: 36px;
-    font-weight: 600;
+    font-weight: 400;
   }
   h4 {
     font-size: 28px;
     line-height: 35px;
-    font-weight: 600;
+    font-weight: 400;
   }
   h5 {
     font-size: 25px;
     line-height: 30px;
-    font-weight: 500;
+    font-weight: 400;
   }
   h6 {
     font-size: 20px;
     line-height: 25px;
-    line-height: 500;
+    font-weight: 400;
   }
   p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 27px;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 @media screen and (max-width: 590px) {
   h1 {
     font-size: 30px;
     line-height: 40px;
-    font-weight: 600;
+    font-weight: 400;
   }
   h2 {
     font-size: 25px;
     line-height: 35px;
-    font-weight: 600;
+    font-weight: 400;
   }
   h3 {
     font-size: 20px;
     line-height: 36px;
-    font-weight: 600;
+    font-weight: 400;
   }
   h4 {
     font-size: 22px;
     line-height: 35px;
-    font-weight: 600;
+    font-weight: 400;
   }
   h5 {
     font-size: 20px;
     line-height: 30px;
-    font-weight: 500;
+    font-weight: 400;
   }
   h6 {
     font-size: 18px;
     line-height: 25px;
-    line-height: 500;
+    font-weight: 400;
   }
   p {
     font-size: 12px;
     line-height: 20px;
-    font-weight: 500;
+    font-weight: 400;
   }
 }

@@ -5,6 +5,7 @@ import React, { useState, FC } from "react";
 import { nav_links } from "./menu";
 import { AiOutlineUser } from "react-icons/ai";
 import { GoLock } from "react-icons/go";
+import { useRouter } from "next/navigation";
 
 import {
   IoIosArrowDown,
@@ -22,13 +23,13 @@ interface NavLinkProps {
   }[];
 }
 const NavLink: React.FC<NavLinkProps> = ({ name, route, children }) => {
-  const [isOpen, setIsOpen] = useState<boolean>();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <div className="relative group">
       <a
         href={route}
-        className="block py-2 px-4 hover:bg-neutral-600 font-semibold  rounded-md capitalize cursor-pointer"
+        className="block py-2 px-4 hover:bg-neutral-600 hover:text-white font-semibold  rounded-md capitalize cursor-pointer"
         onClick={(e) => {
           if (children) {
             e.preventDefault();
@@ -62,6 +63,7 @@ const NavLink: React.FC<NavLinkProps> = ({ name, route, children }) => {
 const Header = () => {
   const [mobileNav, setMobileNav] = useState<boolean>();
   const [openMenus, setOpenMenus] = useState<{ id: number; state: boolean }>();
+  const { push } = useRouter();
 
   const handleMenuClick = (menuId: number) => {
     setOpenMenus((prevState) => {
@@ -81,32 +83,38 @@ const Header = () => {
   };
   return (
     <main>
-      <div className=" flex justify-between items-center  w-full absolute bg-transparent z-30 text-white px-5 lg:px-[7rem] pt-3">
-        <span className=" mt-4">
+      <div className=" flex justify-between items-center  w-full fixed bg-white z-30 text-white px-5 lg:px-[7rem] pt-3">
+        <span className=" mt-4 cursor-pointer" onClick={() => push("/")}>
           <LogoIcon />
         </span>
         <section className=" hidden lg:flex">
-          <nav className=" text-white p-4">
+          <nav className=" text-gray-900 p-4">
             <div className="container mx-auto flex justify-around">
               {nav_links.map((nav) => (
                 <NavLink key={nav.id} name={nav.name} route={nav.route}>
                   {nav.children}
                 </NavLink>
               ))}
+              <span
+                className="block py-2 px-4 hover:bg-neutral-600 hover:text-white font-semibold  rounded-md capitalize cursor-pointer"
+                onClick={() => push("/contact-us")}
+              >
+                Contact us
+              </span>
             </div>
           </nav>
         </section>
         <main className=" gap-3 hidden lg:flex">
-          <button className=" capitalize text-gray-900 font-semibold bg-white h-[40px] rounded-md border-transparent w-[170px] flex justify-center items-center gap-4 ">
+          <button className=" capitalize text-white font-semibold bg-gray-900 h-[40px] rounded-md border-transparent w-[170px] flex justify-center items-center gap-4 ">
             <AiOutlineUser />
             <span>sign in</span>
           </button>
-          <button className=" capitalize text-gray-900 font-semibold bg-white h-[40px] rounded-md border-transparent w-[170px]  flex justify-center items-center gap-4 ">
+          <button className=" capitalize text-white font-semibold bg-gray-900 h-[40px] rounded-md border-transparent w-[170px]  flex justify-center items-center gap-4 ">
             <GoLock /> <span> register</span>
           </button>
         </main>
         <button
-          className=" capitalize text-gray-900 font-semibold bg-white rounded-md border-transparent md:p-[0.7rem] p-[0.3rem] md:w-[120px] w-[100px] text-center lg:hidden "
+          className=" capitalize text-white font-semibold bg-gray-900 rounded-md border-transparent md:p-[0.7rem] p-[0.3rem] md:w-[120px] w-[100px] text-center lg:hidden "
           onClick={handleMobileNav}
         >
           menu
@@ -161,6 +169,13 @@ const Header = () => {
                   </li>
                 </div>
               ))}
+              <Link
+                href={"/contact-us"}
+                onClick={handleMobileNav}
+                className=" flex capitalize justify-between gap-4 items-center w-full mt-8 px-4 py-3 hover:bg-neutral-200 rounded-tr-md rounded-br-md"
+              >
+                <h5> contact us</h5>
+              </Link>
             </ul>
           </main>
           <main className=" gap-3  flex justify-center my-10">

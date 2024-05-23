@@ -5,6 +5,13 @@ import { PiStopCircleLight } from "react-icons/pi";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephoneForward } from "react-icons/bs";
 import { IoHomeOutline } from "react-icons/io5";
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 
 interface Link {
   text: string;
@@ -37,5 +44,28 @@ export const reach_us_link: Link[] = [
   {
     text: "+234 818 490 6291, +234 201 634 4079",
     icon: BsTelephoneForward,
+  },
+];
+
+export const socials = [
+  {
+    link: "#",
+    icon: FaFacebookSquare,
+  },
+  {
+    link: "#",
+    icon: FaInstagramSquare,
+  },
+  {
+    link: "#",
+    icon: FaLinkedin,
+  },
+  {
+    link: "#",
+    icon: BsTwitterX,
+  },
+  {
+    link: "#",
+    icon: FaYoutube,
   },
 ];

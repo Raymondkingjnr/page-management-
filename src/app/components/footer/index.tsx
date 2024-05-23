@@ -4,7 +4,7 @@ import { quick_links, reach_us_link } from "./links";
 
 const Footer = () => {
   return (
-    <main className=" overflow-hidden flex flex-col lg:flex-row lg:justify-between gap-[1rem] lg:px-[3rem] px-[1rem] py-[80px] bg-neutral-500">
+    <main className=" overflow-hidden flex flex-col lg:flex-row lg:justify-between gap-[1rem] lg:px-[3rem] px-[1rem] py-[80px] bg-neutral-400">
       <section>
         <h5 className=" text-white">Contact a Wealth advisor today</h5>
         <p className=" py-5 text-white">
@@ -39,11 +39,13 @@ const Footer = () => {
           <h5 className=" text-white">Reach Us</h5>
           {reach_us_link.map((link) => (
             <li
-              className=" flex pt-4 gap-3 font-medium text-white"
+              className=" flex items-center pt-4 gap-3 font-medium text-white"
               key={link.text}
             >
               <link.icon />
-              {link.text}
+              <span className=" w-full h-full">
+                <p> {link.text}</p>
+              </span>
             </li>
           ))}
         </section>

@@ -11,11 +11,11 @@ const OurTeam = () => {
           <h3 className=" text-center text-white uppercase">Our team </h3>
         </span>
       </section>
-      <section className=" px-[1rem] flex flex-wrap justify-center gap-5 items-center align-middle place-items-center place-content-center my-[6rem]">
+      <section className=" px-[1rem] flex flex-wrap justify-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-11 items-center align-middle place-items-center place-content-center my-[6rem]">
         {teams.map((team) => (
           <main
             key={team.name}
-            className="  w-full md:w-[400px] shadow-2xl rounded-md"
+            className="  w-full md:w-[370px] lg:w-[400px] shadow-2xl rounded-md"
           >
             <div className=" w-full p-[1rem]">
               <Image

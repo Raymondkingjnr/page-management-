@@ -12,7 +12,7 @@ export const nav_links: NavLinkType[] = [
   {
     id: 1,
     name: "about us",
-    route: "/#",
+    route: "#",
     children: [
       {
         name: "our team",
@@ -23,15 +23,15 @@ export const nav_links: NavLinkType[] = [
         route: "/our-company",
       },
       {
-        name: "our careers",
-        route: "/#",
+        name: "careers",
+        route: "/career",
       },
     ],
   },
   {
     id: 2,
     name: "our products",
-    route: "/#",
+    route: "#",
     children: [
       {
         name: "foreign currency investment",
@@ -46,7 +46,7 @@ export const nav_links: NavLinkType[] = [
   {
     id: 3,
     name: "our services",
-    route: "/#",
+    route: "#",
     children: [
       {
         name: "financial planning & advisory",
@@ -66,4 +66,9 @@ export const nav_links: NavLinkType[] = [
       },
     ],
   },
+  // {
+  //   id: 4,
+  //   name: "contact us",
+  //   route: "/contact-us",
+  // },
 ];
