@@ -58,7 +58,7 @@ const OurCompany = () => {
       <section className="px-[1rem] flex flex-col lg:flex-row items-start  justify-between  py-10 lg:px-[5rem]">
         <main className=" w-full lg:w-[500px]">
           {menu.slice(0, 2).map((item) => (
-            <section>
+            <section key={item.text}>
               <div className="  mt-6 flex gap-4  pb-4" key={item.title}>
                 <span className="">
                   <Image
