@@ -56,26 +56,26 @@ const OurCompany = () => {
         </div>
       </section>
       <section className="px-[1rem] flex flex-col lg:flex-row items-start  justify-between  py-10 lg:px-[5rem]">
-        <main className="">
+        <main className=" w-full lg:w-[500px]">
           {menu.slice(0, 2).map((item) => (
-            <div
-              className=" w-full lg:w-[500px] mt-6 flex gap-4 border-b-2 border-b-gray-600 pb-4"
-              key={item.title}
-            >
-              <span className="">
-                <Image
-                  src={item?.image}
-                  alt="page managment asset managment"
-                  height={40}
-                  width={40}
-                  className=" object-contain mt-[0.03rem]"
-                />
-              </span>
-              <span>
-                <h4>{item.title}</h4>
-                <p className=" pt-4">{item.text}</p>
-              </span>
-            </div>
+            <section>
+              <div className="  mt-6 flex gap-4  pb-4" key={item.title}>
+                <span className="">
+                  <Image
+                    src={item?.image}
+                    alt="page managment asset managment"
+                    height={40}
+                    width={40}
+                    className=" object-contain mt-[0.03rem]"
+                  />
+                </span>
+                <span>
+                  <h4>{item.title}</h4>
+                  <p className=" pt-4">{item.text}</p>
+                </span>
+              </div>
+              <div className=" h-[1px] w-full bg-gray-800" />
+            </section>
           ))}
         </main>
         <main>
