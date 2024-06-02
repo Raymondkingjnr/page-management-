@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+button {
+  text-align: center;
+  height: 50px;
+  background: #fff;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: gainsboro solid 1px;
+  font-weight: 500;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 h1 {
   font-size: 50px;
   line-height: 60px;

@@ -20,7 +20,7 @@ const Product = () => {
         <h4 className=" text-center md:text-left">
           Explore our <br /> Product and services
         </h4>
-        <button className=" bg-transparent w-[190px] rounded-sm border border-gray-900 uppercase font-medium h-[40px]">
+        <button className=" bg-transparent w-[190px] border border-gray-900">
           more services
         </button>
       </section>

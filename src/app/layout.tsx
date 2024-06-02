@@ -3,8 +3,6 @@ import { Manrope } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
 
 const inter = Manrope({
   weight: ["400", "500", "700", "800"],
@@ -19,18 +17,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main className=" relative">
-          <Header />
-          {children}
-          <Footer />
-        </main>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
