@@ -23,7 +23,7 @@ const Login = () => {
           Sign In
         </button>
         <p className=" pt-2 font-semibold leading-8 text-gray-600">
-          Don't have an account yet?{" "}
+          Don&apos;t have an account yet?
           <span className=" underline" onClick={() => push("/sign-up")}>
             Sign up
           </span>{" "}
