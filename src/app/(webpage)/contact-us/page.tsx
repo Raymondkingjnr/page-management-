@@ -1,6 +1,9 @@
 import React from "react";
-import { reach_us_link, socials } from "../components/footer/links";
-import { CustomInput, CustomTextAreaInput } from "../components/custom-input";
+import { reach_us_link, socials } from "../../components/footer/links";
+import {
+  CustomInput,
+  CustomTextAreaInput,
+} from "../../components/custom-input";
 import { FaPaperPlane } from "react-icons/fa";
 
 const ContactUs = () => {

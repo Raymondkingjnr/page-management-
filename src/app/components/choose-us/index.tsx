@@ -12,7 +12,7 @@ const ChooseUs = () => {
             title="Way Choose Us"
             text="We deliver competitive returns for our clients leveraging on our expertise in Wealth managment and knowlegde of global market"
           />
-          <button className=" bg-white rounded-md w-[160px] h-[50px] font-medium text-gray-950 mt-12">
+          <button className=" bg-white border w-[160px] h-[50px] text-gray-950 mt-12">
             Get Started
           </button>
         </main>

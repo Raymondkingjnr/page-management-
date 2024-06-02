@@ -17,7 +17,7 @@ const Footer = () => {
             className=" w-full border outline-none border-gray-400 h-[50px] rounded-md"
           />
 
-          <button className="bg-white rounded-md w-full h-[50px]  md:w-[300px] font-normal uppercase border-transparent  text-black md:text-black">
+          <button className="bg-white  w-full  md:w-[300px] uppercase">
             Get insight
           </button>
         </div>

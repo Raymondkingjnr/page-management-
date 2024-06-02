@@ -82,7 +82,7 @@ const Header = () => {
     e.stopPropagation(); // Prevent the event from propagating to the parent link
   };
   return (
-    <main>
+    <main className="">
       <div className=" flex justify-between items-center  w-full fixed bg-white z-30 text-white px-5 lg:px-[7rem] pt-3">
         <span className=" mt-4 cursor-pointer" onClick={() => push("/")}>
           <LogoIcon />
@@ -105,11 +105,17 @@ const Header = () => {
           </nav>
         </section>
         <main className=" gap-3 hidden lg:flex">
-          <button className=" capitalize text-white font-semibold bg-gray-900 h-[40px] rounded-md border-transparent w-[170px] flex justify-center items-center gap-4 ">
+          <button
+            className="  text-white bg-gray-900  w-[170px] gap-3  flex-center"
+            onClick={() => push("/login")}
+          >
             <AiOutlineUser />
             <span>sign in</span>
           </button>
-          <button className=" capitalize text-white font-semibold bg-gray-900 h-[40px] rounded-md border-transparent w-[170px]  flex justify-center items-center gap-4 ">
+          <button
+            className="  text-white bg-gray-900  w-[170px] gap-3  flex-center"
+            onClick={() => push("/sign-up")}
+          >
             <GoLock /> <span> register</span>
           </button>
         </main>
@@ -179,11 +185,17 @@ const Header = () => {
             </ul>
           </main>
           <main className=" gap-3  flex justify-center my-10">
-            <button className=" capitalize bg-neutral-700 font-semibold text-white h-[40px] rounded-md border-transparent w-[170px] flex justify-center items-center gap-4 ">
+            <button
+              className=" bg-neutral-700 text-white  w-[170px] flex-center gap-4 "
+              onClick={() => push("/login")}
+            >
               <AiOutlineUser />
               <span> sign in</span>
             </button>
-            <button className=" capitalize bg-neutral-700 font-semibold text-white h-[40px] rounded-md border-transparent w-[170px] flex justify-center items-center gap-4 ">
+            <button
+              className=" capitalize bg-neutral-700 text-white  w-[170px] flex-center gap-4 "
+              onClick={() => push("/sign-up")}
+            >
               <GoLock />
               <span>register</span>
             </button>
